@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+joblib
+scikit-learn
+PyPDF2
+python-multipart
+jinja2
+python-dotenv
+requests

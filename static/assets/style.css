@@ -1,0 +1,130 @@
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background: rgb(161, 231, 210);
+}
+
+img {
+  width: 17rem;
+  padding: 0;
+  margin: 0;
+}
+
+.icone_email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding: 0;
+  margin-top: 5rem;
+  max-width: 70rem;
+  background-color: rgb(0, 191, 255);
+  border-radius: 20px;
+}
+
+.card {
+  background-color: rgba(245, 245, 245, 0.9);
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 0 3px;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+  width: 99%;       
+  height: 200px; 
+  display: block;   
+  margin: 0 auto;
+  background:#ffffffa6;   
+}
+
+.formulario_arquivo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem; 
+  align-items: flex-start;
+}
+
+.form-label2, #file, .formulario_caixa {
+  border: 1px solid rgba(0, 0, 0, 0.541);
+  background-color: rgb(167, 167, 118);
+}
+
+.btn {
+  margin: 0.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #344442cb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 1px solid black;
+}
+
+.btn.btn-outline-secondary {
+  background-color:rgb(167, 167, 118);
+  color: black;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  background-color: #95c1c4;
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: #95c1c4;
+}
+
+.result-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(245, 245, 245, 0.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+#porcentagem_email,
+#categoria_email,
+#resposta_email {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#resposta_email {
+  grid-column: 1 / span 2;
+  background: lightgreen;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.d-none { 
+  display: none; 
+}
