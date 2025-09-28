@@ -7,7 +7,6 @@ const categoryEl = document.getElementById("category");
 const replyEl = document.getElementById("resposta");
 const confidenceEl = document.getElementById("resposta__percentual");
 
-// Função para extrair texto do PDF usando pdf.js
 async function extractPdf(file) {
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument(arrayBuffer).promise;
@@ -21,12 +20,10 @@ async function extractPdf(file) {
   return text.trim();
 }
 
-// Função para extrair texto de TXT
 async function extractTxt(file) {
   return await file.text();
 }
 
-// Botão de extração
 extractBtn.addEventListener("click", async () => {
   if (!fileInput.files.length) {
     alert("Escolha um arquivo primeiro!");
@@ -48,7 +45,6 @@ extractBtn.addEventListener("click", async () => {
   emailText.value = text;
 });
 
-// Submit único do formulário
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData();
@@ -73,7 +69,6 @@ form.addEventListener("submit", async (e) => {
     replyEl.textContent = data.resposta_sugerida;
     confidenceEl.textContent = data.porcentagem;
 
-    // Ajusta a classe da categoria para estilo visual
     categoryEl.className = data.categoria === "produtivo" ? "category productive" : "category unproductive";
 
   } catch (err) {

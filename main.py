@@ -56,7 +56,6 @@ async def serve_index():
         return FileResponse(index_path)
     return JSONResponse({"error": "Página não encontrada."}, status_code=404)
 
-# NOVO endpoint: apenas extrai texto de arquivo
 @app.post("/extract_text")
 async def extract_text(file: UploadFile = File(...)):
     fname = (file.filename or "").lower()
@@ -73,7 +72,6 @@ async def extract_text(file: UploadFile = File(...)):
 
     return {"text": text}
 
-# Endpoint de classificação
 @app.post("/process")
 async def process_email(email_text: Optional[str] = Form(None)):
     if not email_text or not email_text.strip():
@@ -82,7 +80,6 @@ async def process_email(email_text: Optional[str] = Form(None)):
     email_text = email_text.strip()
     logger.info("Texto recebido (primeiros 300 chars): %s", email_text[:300])
 
-    # Chama Hugging Face
     result = query_huggingface({"inputs": email_text})
     if isinstance(result, dict) and result.get("error"):
         return JSONResponse({"erro": result.get("error")}, status_code=500)
