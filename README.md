@@ -118,7 +118,7 @@ Arquivo `data/sample_emails.json` com ~10–30 emails de exemplo (mistura de pro
 
 ## Deploy
 
-### Render
+### Render 
 
 * Adicionar `requirements.txt` e `Procfile` (`web: uvicorn main:app --host 0.0.0.0 --port $PORT`).
 * Subir no GitHub e conectar o service no Render.
@@ -129,7 +129,7 @@ Arquivo `data/sample_emails.json` com ~10–30 emails de exemplo (mistura de pro
 * Melhor coleção de dados rotulados; balanceamento de classes; fine-tuning de LLM para o domínio.
 * Pipeline de monitoramento (drift detection), feedback loop (re-rotular), UI para revisão humana.
 
-## 14. Licença e contato
+## Licença e contato
 
 * Licença: MIT
 * Contato: Maria Eduarda Ferreira Brabosa / mariaeduardafb00gmail.com
