@@ -26,23 +26,15 @@ Objetivo: reduzir trabalho manual de triagem e acelerar o atendimento.
 ```
 auto-email-classifier/
 ├── backend/
-│   ├── main.py                # FastAPI app
-│   ├── model/
-│   │   ├── train.py           # script de treinamento (gera model.joblib)
-│   │   ├── predict.py         # wrapper para previsões
-│   │   └── model.joblib       # modelo de exemplo (não comitado se grande)
+│   ├── main.py              
+│   ├── model
 │   ├── requirements.txt
-│   └── Dockerfile
 ├── frontend/
 │   ├── index.html
 │   ├── static/
 │   │   ├── style.css
-│   │   └── app.js
-├── data/
-│   ├── sample_emails.json     # exemplos para teste
-│   └── labeled_dataset.csv
+│   │   └── sript.js
 ├── README.md
-└── LICENSE
 ```
 
 ## Instalação e execução local
