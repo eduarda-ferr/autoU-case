@@ -115,10 +115,9 @@ Arquivo `data/sample_emails.json` com ~10–30 emails de exemplo (mistura de pro
   {"subject":"Feliz Natal!","body":"Desejo a você e à família um ótimo Natal!", "label":"Improdutivo"}
 ]
 ```
+---
 
-## Deploy
-
-### Render 
+## Deploy(Render)
 
 * Adicionar `requirements.txt` e `Procfile` (`web: uvicorn main:app --host 0.0.0.0 --port $PORT`).
 * Subir no GitHub e conectar o service no Render.
